@@ -1,0 +1,13 @@
+[user]
+	name  = bohadi
+	email = 
+[alias]
+	st   = status
+	ci   = commit
+	ls   = ls-files
+	diff   = diff -w
+	wdiff  = diff --word-dif
+	praise = blame
+	count  = shortlog -n
+[interactive]
+	diffFilter = diff-highlight

@@ -1,0 +1,4 @@
+
+# vi mode for readline programs (eg python interpreter)
+set editing-mode vi
+

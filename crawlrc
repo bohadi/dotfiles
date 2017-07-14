@@ -1,0 +1,76 @@
+# name = 
+
+tile_full_screen = false
+tile_window_width = 1300
+tile_window_height = 720
+
+msg_min_height = 9
+show_more = false
+small_more = true
+
+bindkey = [;] CMD_TARGET_OBJ_CYCLE_FORWARD
+#bindkey = [backspace] CMD_AUTOFIGHT
+
+autofight_stop = 66
+autofight_wait = true
+default_manual_training = true
+explore_wall_bias = 1
+
+force_more_message += miscast
+
+force_more_message += (27-headed|Agnes|Aizul|Antaeus|Arachne|Asmodeus|Asterion|Azrael|Blork the orc|Boris|Cerebov|Crazy Yiuf|Dispater|Dissolution|Donald|Dowan|Duvessa|Edmund|Ereshkigal|Erica|Erolcha|Eustachio|Fannar|Frances|Francis|Frederick|Gastronok|Geryon|Gloorx Vloq|Grinder|Grum|Harold|Ignacio|Ijyb|Ilsuiw|Jessica|Jorgrun|Jory|Joseph|Josephine|Jozef|Khufu|Kirke|Lamia|Lom Lobon|Louise|Mara|Margery|Maud|Maurice|Menkaure|Mennas|Mnoleg|Murray|Natasha|Nergalle|Nessos|Nikola|Norris|Pikel|Polyphemus|Prince Ribbit|Psyche|Purgy|Roxanne|Rupert|Saint Roka|Sigmund|Snorg|Sojobo|Sonja|Terence|The Lernaean hydra|The royal jelly|The Serpent of Hell|Tiamat|Urug|Vashnia|Wiglaf|Xtahua|chromatic's ghost).*(comes? into view|opens the)
+
+
+
+item_slot ^= identify:+i
+item_slot ^= remove curse:+r
+item_slot ^= fruit:+f
+
+
+autopickup = $?!+%\
+autopickup_exceptions ^= <artifact
+autopickup_exceptions ^= <gift
+autopickup_exceptions ^= <(runed|glowing|dyed|embroidered).*(shield|buckler|cloak|boots|gloves|gauntlets|hat|helmet|scarf)
+
+
+: if you.race() == "Vampire" then
+# dispel undead
+force_more_message += (You convulse!)
+auto_butcher = false  #still auto on bloodless...
+item_slot ^= blood:+o
+ability_slot ^= Bat Form:+F
+ability_slot ^= End Transformation:+i
+: if you.xl() < 21 then
+autopickup_exceptions ^= <(runed|shiny|glowing|dyed|embroidered).*(dagger|robe)
+: end
+spell_slot ^= hibernation:a
+spell_slot ^= dazzling:b
+spell_slot ^= confuse:c
+: end
+
+: if you.race() == "Minotaur" then
+: if you.xl() < 18 then
+autopickup_exceptions ^= <(runed|shiny|glowing|dyed|embroidered).*(chain|plate)
+: end
+: end
+
+
+# fill aux slots
+{
+add_autopickup_func(function(it, name)
+  if it.is_useless then
+    return
+  end
+  if it.class(true) == "armour" then
+    local good_slots = {cloak="Cloak", helmet="Helmet", gloves="Gloves", boots="Boots"}
+    st, _ = it.subtype()
+    if good_slots[st] ~= nil and items.equipped_at(good_slots[st]) == nil then
+      return true
+    end
+  end
+end)
+}
+
+
+
+# TODO mod ===set_target_skill
