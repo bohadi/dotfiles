@@ -233,7 +233,7 @@ vmap <silent> <S-Tab> <gv
 " Page using space
 noremap <Space> <C-F>
 
-" shifted arrows are stupid
+" no shifted arrows
 inoremap <S-Up> <C-O>gk
 noremap  <S-Up> gk
 inoremap <S-Down> <C-O>gj
@@ -294,6 +294,8 @@ elseif (&term !~ "cons")
    map  <C-?> <BS>
    map! <C-?> <BS>
 endif
+
+highlight Normal ctermbg=none
 
 " Python specific stuff
 if has('eval')
