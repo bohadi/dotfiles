@@ -17,6 +17,9 @@ alias pgrep='pgrep -a'
 alias arecord='arecord -f dat'
 alias journalctl='journalctl -xe'
 
+# ruby gems bin path
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
 # vim mode
 bindkey -v
 
