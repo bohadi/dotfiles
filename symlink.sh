@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dir=~/dotfiles                    
-files="vimrc zshrc inputrc haskeline gitconfig crawlrc tmux.conf"
+files="vimrc zshrc inputrc haskeline ghci gitconfig crawlrc tmux.conf"
 
 cd $dir
 for file in $files; do
