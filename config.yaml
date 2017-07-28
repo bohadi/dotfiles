@@ -8,7 +8,7 @@
 # See https://docs.haskellstack.org/en/stable/yaml_configuration/#templates
 templates:
   params:
-#    author-name:
-#    author-email:
-#    copyright:
+    author-name: bohadi
+    author-email: bohadi@users.noreply.github.com
+    copyright: bohadi
     github-username: bohadi
