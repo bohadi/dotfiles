@@ -303,9 +303,6 @@ if has('eval')
    let python_slow_sync = 1
 endif
 
-" pathogen
-"execute pathogen#infect()   " TODO not avail as root
-
 " haskell-vim config
 let g:haskell_enable_quantification = 1   " highlighting `forall`
 let g:haskell_enable_recursivedo = 1      " highlighting `mdo` and `rec`
@@ -314,3 +311,9 @@ let g:haskell_enable_pattern_synonyms = 1 " highlighting `pattern`
 let g:haskell_enable_typeroles = 1        " highlighting type roles
 let g:haskell_enable_static_pointers = 1  " highlighting `static`
 let g:haskell_backpack = 1                " highlighting backpack keywords
+
+
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+Plug 'dag/vim-fish' | Plug 'tpope/vim-surround'
+call plug#end()
