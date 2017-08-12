@@ -7,16 +7,6 @@ set foldmethod=manual      " Automatically create folds for each indent
 
 
 set nocp                    " Enable plugins
-   " omnicomplete
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
-"autocmd FileType c set omnifunc=ccomplete#CompleteCpp
-"autocmd FileType java set omnifunc=javacomplete#Complete
-"set tags+=~/.vim/qttags
-" ctags
-" let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
-" ctags and tasklisk hotkeys
-"map T :TaskList<CR>
-"map P :TlistToggle<CR>
 
 
 " ---- General Setup ----
@@ -155,11 +145,6 @@ endif
 "  endif
 "endif
 
-if has('mouse')
-   " Dont copy the listchars when copying
-   set mouse=nvi
-endif
-
 if has('autocmd')
    " always refresh syntax from the start
    autocmd BufEnter * syntax sync fromstart
@@ -175,58 +160,10 @@ if has('autocmd')
    autocmd BufRead procmailrc :setfiletype procmail
 endif
 
-" ---- cscope/ctags setup ----
-if has('cscope') && executable('cscope') == 1
-   " Search cscope and ctags, in that order
-   set cscopetag
-   set cscopetagorder=0
 
-   set nocsverb
-   if filereadable('cscope.out')
-      cs add cscope.out
-   endif
-   set csverb
-endif
-
-" ---- Key Mappings ----
-
-" improved lookup
-if has('eval')
-   fun! GoDefinition()
-      let pos = getpos(".")
-      normal! gd
-      if getpos(".") == pos
-         exe "tag " . expand("<cword>")
-      endif
-   endfun
-endif
-
-nmap <C-]> :call GoDefinition()<CR>
-
-if has('autocmd')
-   " Shortcuts
-   if has('eval')
-      fun! <SID>cabbrev()
-         iab #i #include
-         iab #I #include
-
-         iab #d #define
-         iab #D #define
-
-         iab #e #endif
-         iab #E #endif
-      endfun
-
-      autocmd FileType c,cpp :call <SID>cabbrev()
-   endif
-
-   " make tab reindent in normal mode
-   autocmd FileType c,cpp,cs,java nmap <Tab> =0<CR>
-endif
 
 " tab indents selection
 vmap <silent> <Tab> >gv
-
 " shift-tab unindents
 vmap <silent> <S-Tab> <gv
 
@@ -276,25 +213,6 @@ noremap <silent> <F4> :set hls!<CR>
 " Don't force column 0 for #
 inoremap # X<BS>#
 
-" Always map <C-h> to backspace
-" Both interix and cons use C-? as forward delete,
-" besides those two exceptions, always set it to backspace
-" Also let interix use ^[[U for end and ^[[H for home
-map <C-h> <BS>
-map! <C-h> <BS>
-if (&term =~ "interix")
-   map  <C-?> <DEL>
-   map! <C-?> <DEL>
-   map [H <Home>
-   map [U <End>
-elseif (&term =~ "^sun")
-   map  <C-?> <DEL>
-   map! <C-?> <DEL>
-elseif (&term !~ "cons")
-   map  <C-?> <BS>
-   map! <C-?> <BS>
-endif
-
 highlight Normal ctermbg=none
 
 " Python specific stuff
@@ -312,8 +230,16 @@ let g:haskell_enable_typeroles = 1        " highlighting type roles
 let g:haskell_enable_static_pointers = 1  " highlighting `static`
 let g:haskell_backpack = 1                " highlighting backpack keywords
 
+map <C-n> :NERDTreeToggle<CR>
+"close tree if is the only window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+set mouse=nvi
+set ttymouse=xterm2
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
-Plug 'dag/vim-fish' | Plug 'tpope/vim-surround'
+Plug 'dag/vim-fish' | Plug 'tpope/vim-surround',
+Plug 'scrooloose/nerdtree'
 call plug#end()
+
