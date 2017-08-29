@@ -13,7 +13,7 @@
 
 
 
-   , template = "%StdinReader% } %uptime% | %multicpu% | %memory% | %dynnetwork% { %battery% | %KSPI% |%date% "
+   , template = "%StdinReader% } %uptime% | %multicpu% | %memory% | %dynnetwork% { %battery% | %KNYC% |%date% "
 
 
 
