@@ -17,3 +17,8 @@ alias D='date +%m%d%y'
 alias pgrep='pgrep -a'
 alias arecord='arecord -f dat'
 alias journalctl='journalctl -xe'
+
+# restore common !! use
+function sudo!!
+  eval sudo $history[1]
+end
