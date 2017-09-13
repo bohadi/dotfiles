@@ -8,5 +8,3 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-
-#TODO manually move config.fish
