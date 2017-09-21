@@ -242,5 +242,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'dag/vim-fish' | Plug 'tpope/vim-surround',
 Plug 'scrooloose/nerdtree',
 Plug 'ajh17/vimcompletesme'
+"Plug 'valloric/youcompleteme'
 call plug#end()
 
