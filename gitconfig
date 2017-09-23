@@ -2,12 +2,13 @@
 	name  = bohadi
 	email = bohadi@users.noreply.github.com
 [alias]
-	st   = status
-	ci   = commit
-	ls   = ls-files
+	st     = status
+	ci     = commit
+	ls     = ls-files
 	diff   = diff -w
 	wdiff  = diff --word-dif
 	praise = blame
 	count  = shortlog -n
+    amend  = commit --amend
 [interactive]
 	diffFilter = diff-highlight
