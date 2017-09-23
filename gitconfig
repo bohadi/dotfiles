@@ -1,6 +1,8 @@
 [user]
 	name  = bohadi
 	email = bohadi@users.noreply.github.com
+[core]
+	editor = vim
 [alias]
 	st     = status
 	ci     = commit
