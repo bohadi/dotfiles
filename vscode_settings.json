@@ -1,0 +1,39 @@
+{
+    "workbench.startupEditor": "welcomePage",
+    "editor.fontSize": 12,
+    "workbench.statusBar.visible": true,
+    "window.menuBarVisibility": "toggle",
+    "git.confirmSync": false,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.hlsearch": true,
+    "vim.searchHighlightColor": "rgba(150, 150, 000, 0.9)",
+    "vim.autoindent": true,
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 0,
+    "todohighlight.keywords": [
+        {
+            "text": "TODO",
+            "backgroundColor": "magenta",
+        },
+        {
+            "text": "console.log",
+            "color": "red",
+            "border": "1px solid red",
+            "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "rgba(0,0,0,.2)",
+            //other styling properties goes here ... 
+        }
+    ],
+    "workbench.colorTheme": "Default High Contrast",
+    "rust.rustup": {
+        "toolchain": "nightly-x86_64-pc-windows-msvc",
+        "nightlyToolchain": "nightly-x86_64-pc-windows-msvc"
+    },
+    "rust.mode": "rls",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.fontSize": 10,
+    "rust.rls": {
+        "useRustfmt": true
+    },
+    "editor.minimap.enabled": false,
+}
