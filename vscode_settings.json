@@ -36,4 +36,5 @@
         "useRustfmt": true
     },
     "editor.minimap.enabled": false,
+    "telemetry.enableTelemetry": false,
 }
