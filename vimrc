@@ -37,8 +37,8 @@ set noerrorbells           " Disable error bells
 set visualbell             " Turn visual bell on
 set t_vb=                  " Make the visual bell emit nothing
 set showcmd                " Show the current command
-set softtabstop=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
 set number "enable line numbering
 set nolist
 set clipboard=unnamedplus
@@ -194,12 +194,14 @@ endif
 nmap K K<cr>
 
 " tabs
-" map <S-Tab> :tabprevious<CR>
-" imap <S-Tab> <Esc>:tabprevious<CR>i
-" map <Tab> :tabnext<CR>
-" imap <Tab> <Esc>:tabnext<CR>i
-" nmap <C-t> :tabnew<CR>
-" imap <C-t> <Esc>:tabnew<CR>i
+"map <S-Tab> :tabprevious<CR>
+"imap <S-Tab> <Esc>:tabprevious<CR>i
+"map <Tab> :tabnext<CR>
+"imap <Tab> <Esc>:tabnext<CR>i
+"nmap <C-t> :tabnew<CR>
+"imap <C-t> <Esc>:tabnew<CR>i
+"nmap <> :-tabmove<CR>
+"imap <> <Esc>:-tabmove<CR>i
 
 " Disable q and Q
 "map q <Nop>
@@ -241,7 +243,7 @@ set ttymouse=xterm2
 call plug#begin('~/.vim/plugged')
 Plug 'dag/vim-fish' | Plug 'tpope/vim-surround',
 Plug 'scrooloose/nerdtree',
-Plug 'ajh17/vimcompletesme'
+"Plug 'ajh17/vimcompletesme'
 "Plug 'valloric/youcompleteme'
 call plug#end()
 

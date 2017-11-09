@@ -2,6 +2,7 @@ fish_vi_key_bindings
 
 set -gx PATH ~/.gem/ruby/2.4.0/bin $PATH
 set -gx PATH ~/.yarn/bin/ $PATH
+set -gx PATH ~/.local/bin/ $PATH
 set -gx NODE_PATH ~/.config/yarn/global/node_modules
 
 set fish_greeting "  ><>"
@@ -18,6 +19,9 @@ alias D='date +%m%d%y'
 alias pgrep='pgrep -a'
 alias arecord='arecord -f dat'
 alias journalctl='journalctl -xe'
+alias ghci='stack ghci'
+
+alias llvm-config='llvm-config-4.0'
 
 # restore common !! use
 function sudo!!
