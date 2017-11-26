@@ -241,8 +241,9 @@ set ttymouse=xterm2
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
-Plug 'dag/vim-fish' | Plug 'tpope/vim-surround',
 Plug 'scrooloose/nerdtree',
+Plug 'dag/vim-fish' | Plug 'tpope/vim-surround',
+Plug 'idris-hackers/idris-vim',
 "Plug 'ajh17/vimcompletesme'
 "Plug 'valloric/youcompleteme'
 call plug#end()
