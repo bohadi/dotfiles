@@ -7,10 +7,11 @@
 	st     = status
 	ci     = commit
 	ls     = ls-files
+	log    = log --name-status
 	diff   = diff -w
 	wdiff  = diff --word-dif
-	praise = blame
 	count  = shortlog -n
     amend  = commit --amend
+	praise = blame
 [interactive]
 	diffFilter = diff-highlight
