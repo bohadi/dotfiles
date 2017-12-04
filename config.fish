@@ -20,6 +20,8 @@ alias pgrep='pgrep -a'
 alias arecord='arecord -f dat'
 alias journalctl='journalctl -xe'
 alias ghci='stack ghci'
+alias red='redshift -O 3500'
+alias redx='redshift -x'
 
 alias llvm-config='llvm-config-4.0'
 

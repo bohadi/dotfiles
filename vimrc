@@ -238,6 +238,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 set mouse=nvi
 set ttymouse=xterm2
+let html_use_css=1
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
