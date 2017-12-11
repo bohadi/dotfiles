@@ -240,12 +240,22 @@ set mouse=nvi
 set ttymouse=xterm2
 let html_use_css=1
 
+" neovimhaskell config
+let g:haskell_enable_quantification = 1   " hl `forall`
+let g:haskell_enable_recursivedo = 1      " hl `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " hl `proc`
+let g:haskell_enable_pattern_synonyms = 1 " hl `pattern`
+let g:haskell_enable_typeroles = 1        " hl type roles
+let g:haskell_enable_static_pointers = 1  " hl `static`
+let g:haskell_backpack = 1                " hl backpack keywords
+let g:haskell_indent_disable = 1
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree',
 Plug 'dag/vim-fish' | Plug 'tpope/vim-surround',
 Plug 'idris-hackers/idris-vim',
+Plug 'neovimhaskell/haskell-vim',
 "Plug 'ajh17/vimcompletesme'
 "Plug 'valloric/youcompleteme'
 call plug#end()
-
