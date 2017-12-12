@@ -194,10 +194,10 @@ endif
 nmap K K<cr>
 
 " tabs
-"map <S-Tab> :tabprevious<CR>
-"imap <S-Tab> <Esc>:tabprevious<CR>i
-"map <Tab> :tabnext<CR>
-"imap <Tab> <Esc>:tabnext<CR>i
+map  <F9> :tabprevious<CR>
+imap <F9> <Esc>:tabprevious<CR>i
+map  <F10> :tabnext<CR>
+imap <F10> <Esc>:tabnext<CR>i
 "nmap <C-t> :tabnew<CR>
 "imap <C-t> <Esc>:tabnew<CR>i
 "nmap <> :-tabmove<CR>
@@ -207,10 +207,10 @@ nmap K K<cr>
 "map q <Nop>
 "map Q <Nop>
 
-" Toggle numbers with F12
-nmap <silent> <F12> :silent set number!<CR>
-imap <silent> <F12> <C-O>:silent set number!<CR>
-noremap <silent> <F4> :set hls!<CR>
+"nmap <silent> <F12> :silent set number!<CR>
+"imap <silent> <F12> <C-O>:silent set number!<CR>
+"noremap <silent> <F12> :set hls!<CR>
+noremap <silent> <F12> :noh<CR>
 
 " Don't force column 0 for #
 inoremap # X<BS>#
@@ -256,6 +256,7 @@ Plug 'scrooloose/nerdtree',
 Plug 'dag/vim-fish' | Plug 'tpope/vim-surround',
 Plug 'idris-hackers/idris-vim',
 Plug 'neovimhaskell/haskell-vim',
+Plug 'ctrlpvim/ctrlp.vim',
 "Plug 'ajh17/vimcompletesme'
 "Plug 'valloric/youcompleteme'
 call plug#end()
