@@ -253,6 +253,8 @@ let g:haskell_backpack = 1                " hl backpack keywords
 let g:haskell_indent_disable = 1
 
 let g:airline_theme='alduin'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_section_x = '%{&filetype}'
 "let g:tmuxline_preset = 'full'
 
 " Specify a directory for plugins
