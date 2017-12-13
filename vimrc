@@ -257,6 +257,16 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_x = '%{&filetype}'
 "let g:tmuxline_preset = 'full'
 
+"map <silent> tw :GhcModTypeInsert<CR>
+"map <silent> ts :GhcModSplitFunCase<CR>
+"map <silent> tt :GhcModType<CR>
+"map <silent> te :GhcModTypeClear<CR>
+
+
+nmap     <C-F>f <Plug>CtrlSFCwordPath
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline',
@@ -267,5 +277,8 @@ Plug 'dag/vim-fish',
 Plug 'tpope/vim-surround',
 Plug 'idris-hackers/idris-vim',
 Plug 'neovimhaskell/haskell-vim',
+"Plug 'eagletmt/ghc-mod',
+"Plug 'eagletmt/neco-ghc',
 Plug 'ctrlpvim/ctrlp.vim',
+Plug 'dyng/ctrlsf.vim',
 call plug#end()
