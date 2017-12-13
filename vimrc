@@ -14,8 +14,10 @@ set nocompatible           " Don't emulate vi's limitations
 set tabstop=4              " 4 spaces for tabs
 set smarttab               " Tab next line based on current line
 set expandtab             " Spaces for indentation
-set autoindent             " Automatically indent next line
-set smartindent            " Indent next line based on current line
+"set autoindent             " Automatically indent next line
+"set smartindent            " Indent next line based on current line
+set noautoindent             " Automatically indent next line
+set nosmartindent            " Indent next line based on current line
 "set linebreak             " Display long lines wrapped at word boundaries
 set incsearch              " Enable incremental searching
 set hlsearch               " Highlight search matches
@@ -67,7 +69,7 @@ endif
 
 if has('osfiletype')
    filetype on             " Detect filetype by extension
-   filetype indent on      " Enable indents based on extensions
+   "filetype indent on      " Enable indents based on extensions
    filetype plugin on      " Load filetype plugins
 endif
 
@@ -81,22 +83,22 @@ if has('eval')
       endif
    endfun
 
-   let g:detectindent_preferred_expandtab = 0
-   let g:detectindent_preferred_indent = 4
+   "let g:detectindent_preferred_expandtab = 0
+   "let g:detectindent_preferred_indent = 4
 
-   fun! <SID>DetectDetectIndent()
-      try
-         :DetectIndent
-      catch
-      endtry
-   endfun
+   "fun! <SID>DetectDetectIndent()
+      "try
+         ":DetectIndent
+      "catch
+      "endtry
+   "endfun
 endif
 
 if has('autocmd')
    autocmd BufEnter * :call WideFold()
-   if has('eval')
-      autocmd BufReadPost * :call s:DetectDetectIndent()
-   endif
+   "if has('eval')
+      "autocmd BufReadPost * :call s:DetectDetectIndent()
+   "endif
 
    autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -250,13 +252,18 @@ let g:haskell_enable_static_pointers = 1  " hl `static`
 let g:haskell_backpack = 1                " hl backpack keywords
 let g:haskell_indent_disable = 1
 
+let g:airline_theme='alduin'
+"let g:tmuxline_preset = 'full'
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline',
+Plug 'vim-airline/vim-airline-themes',
+"Plug 'edkolev/tmuxline.vim',
 Plug 'scrooloose/nerdtree',
-Plug 'dag/vim-fish' | Plug 'tpope/vim-surround',
+Plug 'dag/vim-fish',
+Plug 'tpope/vim-surround',
 Plug 'idris-hackers/idris-vim',
 Plug 'neovimhaskell/haskell-vim',
 Plug 'ctrlpvim/ctrlp.vim',
-"Plug 'ajh17/vimcompletesme'
-"Plug 'valloric/youcompleteme'
 call plug#end()
