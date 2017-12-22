@@ -267,6 +267,10 @@ nmap     <C-F>f <Plug>CtrlSFCwordPath
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
+let g:EasyMotion_do_mapping = 0
+map <Leader> <Plug>(easymotion-overwin-f2)
+let g:EasyMotion_smartcase = 1
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline',
@@ -281,4 +285,6 @@ Plug 'neovimhaskell/haskell-vim',
 "Plug 'eagletmt/neco-ghc',
 Plug 'ctrlpvim/ctrlp.vim',
 Plug 'dyng/ctrlsf.vim',
+Plug 'wincent/terminus',
+Plug 'easymotion/vim-easymotion',
 call plug#end()
