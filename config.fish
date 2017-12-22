@@ -5,6 +5,9 @@ set -gx PATH ~/.yarn/bin/ $PATH
 set -gx PATH ~/.local/bin/ $PATH
 set -gx NODE_PATH ~/.config/yarn/global/node_modules
 
+#set -gx PATH ~/proj/kframework/k/k-distribution/target/release/k/bin $PATH
+set -gx MAVEN_OPTS -XX:+TieredCompilation
+
 set fish_greeting "  ><>"
 
 # aliases
@@ -29,3 +32,6 @@ alias llvm-config='llvm-config-4.0'
 function sudo!!
   eval sudo $history[1]
 end
+
+# OPAM configuration
+#. /home/bobak/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
