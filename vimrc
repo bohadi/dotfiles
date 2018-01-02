@@ -287,4 +287,5 @@ Plug 'ctrlpvim/ctrlp.vim',
 Plug 'dyng/ctrlsf.vim',
 Plug 'wincent/terminus',
 Plug 'easymotion/vim-easymotion',
+Plug 'LnL7/vim-nix',
 call plug#end()
