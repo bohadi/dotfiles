@@ -1,10 +1,3 @@
-# name = 
-
-tile_full_screen = false
-tile_window_width = 1300
-tile_window_height = 720
-
-msg_min_height = 9
 show_more = false
 small_more = true
 
