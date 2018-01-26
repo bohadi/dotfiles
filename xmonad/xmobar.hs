@@ -29,7 +29,7 @@
 
    , commands = [
         -- weather monitor
-        Run Weather "KSPI" [ "--template", "<fc=#4682b4><tempF></fc>°F <skyCondition>", 
+        Run Weather "KNYC" [ "--template", "<fc=#4682b4><tempF></fc>°F <skyCondition>", 
                              "-L", "67", 
                              "-H", "77", 
                              "--low", "lightblue",

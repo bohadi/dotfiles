@@ -1,1 +1,2 @@
-:def hoogle \x -> return $ ":!hoogle " ++ x
+:def hoogle \x -> return $ ":!hoogle "       ++ x
+:def doc    \x -> return $ ":!haskell-docs " ++ x

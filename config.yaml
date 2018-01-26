@@ -12,4 +12,4 @@ templates:
     author-email: bohadi@protonmail.com
     github-username: bohadi
 ghc-options:
-    "$everything": -O2 -freverse-errors
+    "$everything": -freverse-errors

@@ -262,6 +262,11 @@ let g:airline_section_x = '%{&filetype}'
 "map <silent> tt :GhcModType<CR>
 "map <silent> te :GhcModTypeClear<CR>
 
+"k/maude syntax
+"TODO fix transparency
+"au BufRead,BufNewFile *.k set filetype=kframework
+"au! Syntax kframework source kframework.vim
+"syn on
 
 nmap     <C-F>f <Plug>CtrlSFCwordPath
 nnoremap <C-F>t :CtrlSFToggle<CR>
