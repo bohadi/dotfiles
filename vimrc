@@ -276,6 +276,8 @@ let g:EasyMotion_do_mapping = 0
 map <Leader> <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 
+let g:vimwiki_list = [ { 'path':'wiki' } ]
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline',
@@ -293,4 +295,7 @@ Plug 'dyng/ctrlsf.vim',
 Plug 'wincent/terminus',
 Plug 'easymotion/vim-easymotion',
 Plug 'LnL7/vim-nix',
+Plug 'let-def/vimbufsync',
+Plug 'the-lambda-church/coquille',
+Plug 'vimwiki/vimwiki', { 'branch':'dev' }
 call plug#end()

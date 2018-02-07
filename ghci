@@ -1,2 +1,4 @@
 :def hoogle \x -> return $ ":!hoogle "       ++ x
 :def doc    \x -> return $ ":!haskell-docs " ++ x
+
+:set prompt "\ESC[1;34m%s\n\ESC[1;33mλ> \ESC[m"
