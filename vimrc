@@ -279,6 +279,7 @@ let g:EasyMotion_smartcase = 1
 let g:vimwiki_list = [ { 'path':'wiki' } ]
 
 " Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
+au BufRead,BufNewFile *.v set filetype=coq
 au FileType coq call coquille#FNMapping()
 
 " Specify a directory for plugins
@@ -299,6 +300,7 @@ Plug 'wincent/terminus',
 Plug 'easymotion/vim-easymotion',
 Plug 'LnL7/vim-nix',
 Plug 'let-def/vimbufsync',
+Plug 'jvoorhis/coq.vim',
 Plug 'the-lambda-church/coquille',
 Plug 'vimwiki/vimwiki', { 'branch':'dev' }
 call plug#end()
