@@ -278,6 +278,9 @@ let g:EasyMotion_smartcase = 1
 
 let g:vimwiki_list = [ { 'path':'wiki' } ]
 
+" Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
+au FileType coq call coquille#FNMapping()
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline',
