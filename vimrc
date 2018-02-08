@@ -299,8 +299,8 @@ Plug 'dyng/ctrlsf.vim',
 Plug 'wincent/terminus',
 Plug 'easymotion/vim-easymotion',
 Plug 'LnL7/vim-nix',
+Plug 'vimwiki/vimwiki', { 'branch':'dev' }
 Plug 'let-def/vimbufsync',
 Plug 'jvoorhis/coq.vim',
 Plug 'the-lambda-church/coquille',
-Plug 'vimwiki/vimwiki', { 'branch':'dev' }
 call plug#end()
