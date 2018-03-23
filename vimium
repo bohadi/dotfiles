@@ -1,0 +1,9 @@
+# keybinds
+map Q Vomnibar.activateInNewTab
+map q Vomnibar.activate
+map h goBack
+map l goForward
+map i previousTab
+map o nextTab
+
+# searching
