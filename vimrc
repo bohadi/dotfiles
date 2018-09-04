@@ -10,6 +10,7 @@ set nocp                    " Enable plugins
 
 
 " ---- General Setup ----
+set completeopt-=preview   " no scratch preview pane for omnicomp
 set nocompatible           " Don't emulate vi's limitations
 set tabstop=4              " 4 spaces for tabs
 set smarttab               " Tab next line based on current line
@@ -309,4 +310,5 @@ Plug 'vimwiki/vimwiki', { 'branch':'dev' }
 Plug 'let-def/vimbufsync',
 Plug 'jvoorhis/coq.vim',
 Plug 'the-lambda-church/coquille',
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
