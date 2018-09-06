@@ -311,4 +311,8 @@ Plug 'let-def/vimbufsync',
 Plug 'jvoorhis/coq.vim',
 Plug 'the-lambda-church/coquille',
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'vim-ruby/vim-ruby',
+Plug 'tpope/vim-rails',
 call plug#end()
