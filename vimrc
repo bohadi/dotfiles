@@ -74,6 +74,9 @@ if has('osfiletype')
    filetype plugin on      " Load filetype plugins
 endif
 
+hi Pmenu     ctermfg=lightgrey ctermbg=black
+hi PmenuSel  ctermfg=lightgrey ctermbg=darkcyan
+
 " ---- Folding ----
 if has('eval')
    fun! WideFold()
@@ -289,6 +292,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" js tabs : 2 space
+au FileType javascript setl sw=2 sts=2 et
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline',
@@ -316,3 +322,4 @@ Plug 'mxw/vim-jsx'
 Plug 'vim-ruby/vim-ruby',
 Plug 'tpope/vim-rails',
 call plug#end()
+
