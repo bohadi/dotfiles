@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+eval "$(stack --bash-completion-script stack)"
+
 export PATH=$PATH:~/.yarn/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/.gem/ruby/2.5.0/bin

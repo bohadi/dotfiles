@@ -75,7 +75,7 @@ if has('osfiletype')
 endif
 
 hi Pmenu     ctermfg=lightgrey ctermbg=black
-hi PmenuSel  ctermfg=lightgrey ctermbg=darkcyan
+hi PmenuSel  ctermfg=lightgrey ctermbg=darkmagenta
 
 " ---- Folding ----
 if has('eval')
