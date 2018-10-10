@@ -12,7 +12,7 @@ set nocp                    " Enable plugins
 " ---- General Setup ----
 set completeopt-=preview   " no scratch preview pane for omnicomp
 set nocompatible           " Don't emulate vi's limitations
-set tabstop=4              " 4 spaces for tabs
+set tabstop=2              " 4 spaces for tabs
 set smarttab               " Tab next line based on current line
 set expandtab             " Spaces for indentation
 "set autoindent             " Automatically indent next line
@@ -40,8 +40,8 @@ set noerrorbells           " Disable error bells
 set visualbell             " Turn visual bell on
 set t_vb=                  " Make the visual bell emit nothing
 set showcmd                " Show the current command
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set number "enable line numbering
 set nolist
 set clipboard=unnamedplus

@@ -9,7 +9,6 @@ bindkey = [;] CMD_TARGET_OBJ_CYCLE_FORWARD
 autofight_stop = 66
 autofight_wait = true
 default_manual_training = true
-explore_wall_bias = 1
 
 force_more_message += miscast
 
@@ -29,6 +28,7 @@ autopickup_exceptions ^= <(runed|glowing|dyed|embroidered).*(shield|buckler|cloa
 
 
 : if you.race() == "Vampire" then
+# explore_wall_bias = 100
 # warn on dispel undead / holy brand
 force_more_message += (You convulse!)
 force_more_message += holy wrath

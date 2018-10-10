@@ -4,6 +4,7 @@
 
 eval "$(stack --bash-completion-script stack)"
 
+export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.yarn/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/.gem/ruby/2.5.0/bin
@@ -149,3 +150,23 @@ ex ()
 
 # better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
+
+
+soundbg() {
+  for s in $@; do
+    paplay $s
+  done
+}
+beep() {
+  s=$?
+  sound_ok=~/dotfiles/ok.ogg
+  sound_error=~/dotfiles/err.ogg
+  if [[ $s = 0 ]]; then
+    echo OK
+    soundbg $sound_ok
+  else
+    echo ERROR: $s
+    soundbg $sound_error
+    soundbg $sound_error
+  fi
+}
