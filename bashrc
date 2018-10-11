@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+export EDITOR=vim
+
 eval "$(stack --bash-completion-script stack)"
 
 export PATH=$PATH:~/.local/bin
