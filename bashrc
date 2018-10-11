@@ -100,11 +100,13 @@ fi
 
 unset use_color safe_term match_lhs sh
 
+alias rm="rm -I"                          # confirm before deleting a lot
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
+#alias np='nano -w PKGBUILD'
 alias more=less
+alias less="less -M"
 
 xhost +local:root > /dev/null 2>&1
 
@@ -152,21 +154,20 @@ ex ()
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 
-soundbg() {
-  for s in $@; do
-    paplay $s
-  done
-}
 beep() {
   s=$?
   sound_ok=~/dotfiles/ok.ogg
   sound_error=~/dotfiles/err.ogg
+  let vol50=2#0111111111111111
+  let vol75=2#1011111111111111
+  let volmx=2#1111111111111111
   if [[ $s = 0 ]]; then
     echo OK
-    soundbg $sound_ok
+    paplay $sound_ok --volume=$volmx
   else
     echo ERROR: $s
-    soundbg $sound_error
-    soundbg $sound_error
+    paplay $sound_error --volume=$volmx
+    paplay $sound_error --volume=$vol75
+    paplay $sound_error --volume=$vol50
   fi
 }

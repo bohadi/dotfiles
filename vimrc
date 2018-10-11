@@ -321,5 +321,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'vim-ruby/vim-ruby',
 Plug 'tpope/vim-rails',
+Plug 'tpope/vim-obsession',
+"Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
