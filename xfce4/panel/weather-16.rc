@@ -1,8 +1,8 @@
-loc_name=Urbana, Champaign County
-lat=40.111717
-lon=-88.207301
-msl=225
-timezone=America/Chicago
+loc_name=上海市, 黄浦区
+lat=31.225344
+lon=121.488892
+msl=12
+timezone=Asia/Shanghai
 cache_file_max_age=172800
 power_saving=true
 units_temperature=1

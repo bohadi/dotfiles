@@ -2,6 +2,16 @@
 # ~/.bashrc
 #
 
+alias rm="rm -I"                          # confirm before deleting a lot
+alias cp="cp -i"                          # confirm before overwriting something
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB
+#alias np='nano -w PKGBUILD'
+alias more=less
+alias less="less -M"
+alias tree="tree -a"
+
+
 export EDITOR=vim
 
 eval "$(stack --bash-completion-script stack)"
@@ -101,14 +111,6 @@ else
 fi
 
 unset use_color safe_term match_lhs sh
-
-alias rm="rm -I"                          # confirm before deleting a lot
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-#alias np='nano -w PKGBUILD'
-alias more=less
-alias less="less -M"
 
 xhost +local:root > /dev/null 2>&1
 

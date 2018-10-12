@@ -1,5 +1,5 @@
 favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-web-browser.desktop
-recent=firefox.desktop,inkscape.desktop,gimp.desktop,xfce4-clipman.desktop,xfce4-dict.desktop,xfce-mouse-settings.desktop,xfce-workspaces-settings.desktop,xfce-wmtweaks-settings.desktop,xfce-wm-settings.desktop,xfce-backdrop-settings.desktop
+recent=stone-soup.desktop,exo-preferred-applications.desktop,firefox.desktop,xfce4-settings-editor.desktop,pavucontrol.desktop,deepin.com.wechat.desktop,exo-web-browser.desktop,xfce-mouse-settings.desktop,xfce4-power-manager-settings.desktop,transmission-qt.desktop
 button-title=Applications
 button-icon=/usr/share/icons/whiskermenu-manjaro.svg
 button-single-row=false

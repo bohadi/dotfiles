@@ -13,7 +13,6 @@
         <value type="int" value="18"/>
         <value type="int" value="22"/>
         <value type="int" value="6"/>
-        <value type="int" value="2"/>
         <value type="int" value="10"/>
         <value type="int" value="11"/>
         <value type="int" value="15"/>
@@ -54,10 +53,9 @@
     <property name="plugin-8" type="string" value="whiskermenu"/>
     <property name="plugin-5" type="string" value="clock">
       <property name="digital-format" type="string" value="&lt;b&gt;%A&lt;/b&gt; %x &lt;span color=&apos;#19f&apos;&gt;%l:%M%P&lt;/span&gt; %Z &lt;i&gt;(%V)&lt;/i&gt; "/>
-      <property name="timezone" type="string" value="America/Chicago"/>
+      <property name="timezone" type="string" value="Asia/Bangkok"/>
     </property>
     <property name="plugin-1" type="string" value="battery"/>
-    <property name="plugin-2" type="string" value="cpufreq"/>
     <property name="plugin-6" type="string" value="cpugraph"/>
     <property name="plugin-10" type="string" value="diskperf"/>
     <property name="plugin-11" type="string" value="fsguard"/>
