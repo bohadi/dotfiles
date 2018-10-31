@@ -162,16 +162,17 @@ beep() {
   s=$?
   sound_ok=~/dotfiles/ok.ogg
   sound_error=~/dotfiles/err.ogg
-  let vol50=2#0111111111111111
-  let vol75=2#1011111111111111
   let volmx=2#1111111111111111
+  let vol1=2#1000111111111111
+  let vol2=2#1000000111111111
+  let vol3=2#1000000000111111
   if [[ $s = 0 ]]; then
     echo OK
-    paplay $sound_ok --volume=$volmx
+    paplay $sound_ok --volume=$vol1
   else
     echo ERROR: $s
-    paplay $sound_error --volume=$volmx
-    paplay $sound_error --volume=$vol75
-    paplay $sound_error --volume=$vol50
+    paplay $sound_error --volume=$vol1
+    paplay $sound_error --volume=$vol2
+    paplay $sound_error --volume=$vol3
   fi
 }

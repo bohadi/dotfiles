@@ -5,7 +5,7 @@ set foldmethod=manual      " Automatically create folds for each indent
 "au BufWinLeave * mkview     " Automatically save and load folds
 "au BufWinEnter * silent loadview
 
-
+set noswapfile
 set nocp                    " Enable plugins
 
 
@@ -74,8 +74,9 @@ if has('osfiletype')
    filetype plugin on      " Load filetype plugins
 endif
 
-hi Pmenu     ctermfg=lightgrey ctermbg=black
-hi PmenuSel  ctermfg=lightgrey ctermbg=darkmagenta
+hi StatusLine                   ctermbg=black
+hi Pmenu      ctermfg=lightgrey ctermbg=black
+hi PmenuSel   ctermfg=lightgrey ctermbg=darkmagenta
 
 " ---- Folding ----
 if has('eval')
@@ -297,6 +298,7 @@ au FileType javascript setl sw=2 sts=2 et
 
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
+"Plug 'powerline/powerline',
 Plug 'vim-airline/vim-airline',
 Plug 'vim-airline/vim-airline-themes',
 "Plug 'edkolev/tmuxline.vim',
@@ -323,5 +325,6 @@ Plug 'vim-ruby/vim-ruby',
 Plug 'tpope/vim-rails',
 Plug 'tpope/vim-obsession',
 "Plug 'christoomey/vim-tmux-navigator'
+Plug 'cy2081/vim-cyim',
 call plug#end()
 
