@@ -11,6 +11,15 @@ alias more=less
 alias less="less -M"
 alias tree="tree -a"
 
+alias slite="light -S"
+alias srs="redshift -P -O"
+alias srsd="redshift -P -O 6500"
+alias srsn="redshift -P -O 3500"
+
+alias svol="amixer set 'Master'"
+
+alias smt="(while sleep 1; do date +%X; date +%Z%A; date +%x; echo -e '\f'; done) | sm - -i -b hotpink"
+
 
 export EDITOR=vim
 

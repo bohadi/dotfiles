@@ -6,6 +6,7 @@ set foldmethod=manual      " Automatically create folds for each indent
 "au BufWinEnter * silent loadview
 
 set noswapfile
+set nobackup
 set nocp                    " Enable plugins
 
 
@@ -112,13 +113,12 @@ if has('autocmd')
 endif
 
 " ---- Spelling ----
-if (v:version >= 700)
-   set spelllang=en_us        " US English Spelling please
-
+"if (v:version >= 700)
+"   set spelllang=en_us        " US English Spelling please
    " Toggle spellchecking with F10
-   nmap <silent> <F10> :silent set spell!<CR>
-   imap <silent> <F10> <C-O>:silent set spell!<CR>
-endif
+"   nmap <silent> <F10> :silent set spell!<CR>
+"   imap <silent> <F10> <C-O>:silent set spell!<CR>
+"endif
 
 " Display a pretty statusline if we can
 if has('title')
@@ -131,11 +131,11 @@ if has('statusline')
 endif
 
 " Enable modelines only on secure vim
-if (v:version == 603 && has("patch045")) || (v:version > 603)
-   set modeline
-else
-   set nomodeline
-endif
+"if (v:version == 603 && has("patch045")) || (v:version > 603)
+"   set modeline
+"else
+"   set nomodeline
+"endif
 
 " Show trailing whitespace visually
 "if (&termencoding == "utf-8") || has("gui_running")
@@ -293,6 +293,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:minimap_highlight='Keyword'
+
 " js tabs : 2 space
 au FileType javascript setl sw=2 sts=2 et
 
@@ -311,10 +313,10 @@ Plug 'neovimhaskell/haskell-vim',
 "Plug 'eagletmt/neco-ghc',
 Plug 'ctrlpvim/ctrlp.vim',
 Plug 'dyng/ctrlsf.vim',
-Plug 'wincent/terminus',
-Plug 'easymotion/vim-easymotion',
+"Plug 'wincent/terminus',
+"Plug 'easymotion/vim-easymotion',
 Plug 'LnL7/vim-nix',
-Plug 'vimwiki/vimwiki', { 'branch':'dev' }
+"Plug 'vimwiki/vimwiki', { 'branch':'dev' }
 Plug 'let-def/vimbufsync',
 Plug 'jvoorhis/coq.vim',
 Plug 'the-lambda-church/coquille',
@@ -324,7 +326,9 @@ Plug 'mxw/vim-jsx'
 Plug 'vim-ruby/vim-ruby',
 Plug 'tpope/vim-rails',
 Plug 'tpope/vim-obsession',
+Plug 'severin-lemaignan/vim-minimap',
+Plug 'justinmk/vim-sneak',
 "Plug 'christoomey/vim-tmux-navigator'
-Plug 'cy2081/vim-cyim',
+"Plug 'cy2081/vim-cyim',
 call plug#end()
 
