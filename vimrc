@@ -44,6 +44,7 @@ set showcmd                " Show the current command
 set softtabstop=2
 set shiftwidth=2
 set number "enable line numbering
+set relativenumber
 set nolist
 set clipboard=unnamedplus
 
@@ -298,22 +299,51 @@ let g:minimap_highlight='Keyword'
 " js tabs : 2 space
 au FileType javascript setl sw=2 sts=2 et
 
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{next}"}
+
+if executable('rls')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'rls',
+    \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+    \ 'whitelist': ['rust'],
+    \ })
+endif
+
+function! s:on_lsp_buffer_enabled() abort
+  setlocal omnifunc=lsp#complete
+  setlocal signcolumn=yes
+  nmap <buffer> <f1> <plug>(lsp-document-diagnostics)
+  nmap <buffer> <f2> <plug>(lsp-hover)
+  nmap <buffer> <f3> <plug>(lsp-references)
+  nmap <buffer> <f4> <plug>(lsp-rename)
+  nmap <buffer> gd <plug>(lsp-peek-definition)
+  nmap <buffer> gD <plug>(lsp-definition)
+  nmap <buffer> <f5> <plug>(lsp-previous-diagnostic)
+  nmap <buffer> <f6> <plug>(lsp-next-diagnostic)
+endfunction
+
+augroup lsp_install
+  au!
+  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 "Plug 'powerline/powerline',
-Plug 'vim-airline/vim-airline',
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes',
 "Plug 'edkolev/tmuxline.vim',
-Plug 'scrooloose/nerdtree',
+Plug 'scrooloose/nerdtree'
 Plug 'dag/vim-fish',
 Plug 'tpope/vim-surround',
 Plug 'idris-hackers/idris-vim',
 Plug 'neovimhaskell/haskell-vim',
 "Plug 'eagletmt/ghc-mod',
 "Plug 'eagletmt/neco-ghc',
-Plug 'ctrlpvim/ctrlp.vim',
-Plug 'dyng/ctrlsf.vim',
-"Plug 'wincent/terminus',
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'wincent/terminus'
 "Plug 'easymotion/vim-easymotion',
 Plug 'LnL7/vim-nix',
 "Plug 'vimwiki/vimwiki', { 'branch':'dev' }
@@ -323,12 +353,20 @@ Plug 'the-lambda-church/coquille',
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'vim-ruby/vim-ruby',
-Plug 'tpope/vim-rails',
-Plug 'tpope/vim-obsession',
-Plug 'severin-lemaignan/vim-minimap',
-Plug 'justinmk/vim-sneak',
+Plug 'vim-ruby/vim-ruby' 
+Plug 'tpope/vim-rails' 
+Plug 'tpope/vim-obsession' 
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'justinmk/vim-sneak' 
+Plug 'jpalardy/vim-slime' 
+Plug 'wlangstroth/vim-racket'
+Plug 'cespare/vim-toml'
 "Plug 'christoomey/vim-tmux-navigator'
 "Plug 'cy2081/vim-cyim',
+Plug 'rust-lang/rust.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 

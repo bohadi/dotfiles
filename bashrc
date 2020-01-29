@@ -20,18 +20,23 @@ alias svol="amixer set 'Master'"
 
 alias smt="(while sleep 1; do date +%X; date +%Z%A; date +%x; echo -e '\f'; done) | sm - -i -b hotpink"
 
+alias nohist="export HISTFILE=/dev/null"
 
 export EDITOR=vim
 
-eval "$(stack --bash-completion-script stack)"
+alias ytdl="youtube-dl --write-sub --convert-subs vtt"
+tchat () { chromium --app-window-size=400,100 --app-window-position=1000,500 --app=https://www.twitch.tv/popout/"$1"/chat ; }
 
-export PATH=$PATH:~/.local/bin
-export PATH=$PATH:~/.yarn/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/.gem/ruby/2.5.0/bin
+eval "$(stack --bash-completion-script stack)"
 
 export GO111MODULE=auto
 export GOPATH=~/go
+
+export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.yarn/bin
+export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/.gem/ruby/2.6.0/bin
 
 [[ $- != *i* ]] && return
 
@@ -137,6 +142,8 @@ shopt -s expand_aliases
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
+# After each command, save and reload history
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 #
 # # ex - archive extractor

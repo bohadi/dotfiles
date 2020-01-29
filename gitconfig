@@ -15,3 +15,5 @@
 	praise = blame
 [interactive]
 	diffFilter = diff-highlight
+[credential]
+	helper = cache

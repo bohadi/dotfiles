@@ -6,6 +6,8 @@ small_more = true
 bindkey = [;] CMD_TARGET_OBJ_CYCLE_FORWARD
 #bindkey = [backspace] CMD_AUTOFIGHT
 
+wall_jump_move = true
+
 autofight_stop = 66
 autofight_wait = true
 default_manual_training = true
