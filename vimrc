@@ -9,12 +9,17 @@ set noswapfile
 set nobackup
 set nocp                    " Enable plugins
 
-
 " ---- General Setup ----
+set fileencoding=utf8
 set completeopt-=preview   " no scratch preview pane for omnicomp
 set nocompatible           " Don't emulate vi's limitations
-set tabstop=2              " 4 spaces for tabs
-set smarttab               " Tab next line based on current line
+set list listchars=tab:->,trail:.,extends:>,nbsp:_
+"set smarttab              " Tab next line based on current line
+set tabstop=2              " 2 spaces for tabs
+set softtabstop=2
+set shiftwidth=2
+set copyindent
+set preserveindent
 set expandtab             " Spaces for indentation
 "set autoindent             " Automatically indent next line
 "set smartindent            " Indent next line based on current line
@@ -41,15 +46,13 @@ set noerrorbells           " Disable error bells
 set visualbell             " Turn visual bell on
 set t_vb=                  " Make the visual bell emit nothing
 set showcmd                " Show the current command
-set softtabstop=2
-set shiftwidth=2
 set number "enable line numbering
 set relativenumber
-set nolist
+"set nolist
 set clipboard=unnamedplus
-
 colorscheme darkblue
 highlight Search ctermfg=white ctermbg=205
+highlight Comment cterm=italic
 
 if &term =~ '^xterm\\|rxvt'
   " solid underscore
@@ -206,6 +209,8 @@ map  <F9> :tabprevious<CR>
 imap <F9> <Esc>:tabprevious<CR>i
 map  <F10> :tabnext<CR>
 imap <F10> <Esc>:tabnext<CR>i
+map  <F8> :.w !bash<CR>
+imap <F8> <Esc>:.w !bash<CR>i
 "nmap <C-t> :tabnew<CR>
 "imap <C-t> <Esc>:tabnew<CR>i
 "nmap <> :-tabmove<CR>

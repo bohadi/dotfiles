@@ -1,5 +1,8 @@
 # language = zh
 
+tile_runrest_rate = 700
+runrest_ignore_message += (chunks|rotten|transformation|contamination|poison|restored|exhausted|revert|hungry)
+
 show_more = false
 small_more = true
 
@@ -12,9 +15,11 @@ autofight_stop = 66
 autofight_wait = true
 default_manual_training = true
 
+force_more_message += (Strange energies|genetic|evolve)
+force_more_message += (You hear the)
 force_more_message += miscast
 
-force_more_message += (27-headed|Agnes|Aizul|Antaeus|Arachne|Asmodeus|Asterion|Azrael|Blork the orc|Boris|Cerebov|Crazy Yiuf|Dispater|Dissolution|Donald|Dowan|Duvessa|Edmund|Ereshkigal|Erica|Erolcha|Eustachio|Fannar|Frances|Francis|Frederick|Gastronok|Geryon|Gloorx Vloq|Grinder|Grum|Harold|Ignacio|Ijyb|Ilsuiw|Jessica|Jorgrun|Jory|Joseph|Josephine|Jozef|Khufu|Kirke|Lamia|Lom Lobon|Louise|Mara|Margery|Maud|Maurice|Menkaure|Mennas|Mnoleg|Murray|Natasha|Nergalle|Nessos|Nikola|Norris|Pikel|Polyphemus|Prince Ribbit|Psyche|Purgy|Roxanne|Rupert|Saint Roka|Sigmund|Snorg|Sojobo|Sonja|Terence|The Lernaean hydra|The royal jelly|The Serpent of Hell|Tiamat|Urug|Vashnia|Wiglaf|Xtahua|chromatic's ghost).*(comes? into view|opens the)
+force_more_message += (orb of fire|27-headed|Agnes|Aizul|Antaeus|Arachne|Asmodeus|Asterion|Azrael|Blork the orc|Boris|Cerebov|Crazy Yiuf|Dispater|Dissolution|Donald|Dowan|Duvessa|Edmund|Ereshkigal|Erica|Erolcha|Eustachio|Fannar|Frances|Francis|Frederick|Gastronok|Geryon|Gloorx Vloq|Grinder|Grum|Harold|Ignacio|Ijyb|Ilsuiw|Jessica|Jorgrun|Jory|Joseph|Josephine|Jozef|Khufu|Kirke|Lamia|Lom Lobon|Louise|Mara|Margery|Maud|Maurice|Menkaure|Mennas|Mnoleg|Murray|Natasha|Nergalle|Nessos|Nikola|Norris|Pikel|Polyphemus|Prince Ribbit|Psyche|Purgy|Roxanne|Rupert|Saint Roka|Sigmund|Snorg|Sojobo|Sonja|Terence|The Lernaean hydra|The royal jelly|The Serpent of Hell|Tiamat|Urug|Vashnia|Wiglaf|Xtahua|chromatic's ghost).*(comes? into view|opens the)
 
 
 

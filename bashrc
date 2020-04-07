@@ -22,12 +22,20 @@ alias smt="(while sleep 1; do date +%X; date +%Z%A; date +%x; echo -e '\f'; done
 
 alias nohist="export HISTFILE=/dev/null"
 
-export EDITOR=vim
+alias scrcpy='scrcpy -b2M -m800 --max-fps 15 -t --window-borderless --window-title scrcpy --render-expired-frames'
 
-alias ytdl="youtube-dl --write-sub --convert-subs vtt"
-tchat () { chromium --app-window-size=400,100 --app-window-position=1000,500 --app=https://www.twitch.tv/popout/"$1"/chat ; }
+alias ytdl='youtube-dl'
+tchat () { chromium --app-window-size=200,100 --app-window-position=1000,500 --app=https://www.twitch.tv/popout/"$1"/chat ; }
+cdcss () { chromium --new-window https://crawl.develz.org/info http://crawl.chaosforge.org http://dcssfamiliar.com file:///home/bohadi/.crawl/morgue/chromatic.txt ; }
 
 eval "$(stack --bash-completion-script stack)"
+
+export EDITOR=vim
+
+#export WINEPREFIX="/home/bohadi/.local/share/wineprefixes/wine32"
+#export WINEARCH="win32"
+alias wechat='LC_ALL="zh_CN.UTF8" wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Tencent/WeChat/WeChat.exe'
+alias zoom='LC_ALL="zh_CN.UTF8" zoom'
 
 export GO111MODULE=auto
 export GOPATH=~/go
