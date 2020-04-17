@@ -279,6 +279,8 @@ let g:airline_section_x = '%{&filetype}'
 "au! Syntax kframework source kframework.vim
 "syn on
 
+au BufRead,BufNewFile *.lox set filetype=lox
+
 nmap     <C-F>f <Plug>CtrlSFCwordPath
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>

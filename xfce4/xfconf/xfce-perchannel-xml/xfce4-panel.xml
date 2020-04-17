@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
-  <property name="panels" type="uint" value="1">
+  <property name="panels" type="array">
+    <value type="int" value="0"/>
     <property name="panel-0" type="empty">
       <property name="position" type="string" value="p=8;x=720;y=884"/>
       <property name="length" type="uint" value="100"/>
@@ -9,8 +10,9 @@
       <property name="plugin-ids" type="array">
         <value type="int" value="8"/>
         <value type="int" value="3"/>
-        <value type="int" value="12"/>
         <value type="int" value="18"/>
+        <value type="int" value="12"/>
+        <value type="int" value="2"/>
         <value type="int" value="22"/>
         <value type="int" value="6"/>
         <value type="int" value="10"/>
@@ -19,20 +21,22 @@
         <value type="int" value="13"/>
         <value type="int" value="19"/>
         <value type="int" value="1"/>
-        <value type="int" value="17"/>
+        <value type="int" value="9"/>
         <value type="int" value="16"/>
-        <value type="int" value="14"/>
         <value type="int" value="4"/>
+        <value type="int" value="14"/>
         <value type="int" value="5"/>
       </property>
       <property name="role" type="string" value="xfce4-panel-12965750720"/>
       <property name="length-adjust" type="bool" value="false"/>
       <property name="background-style" type="uint" value="0"/>
-      <property name="size" type="uint" value="24"/>
+      <property name="size" type="uint" value="28"/>
       <property name="mode" type="uint" value="0"/>
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="disable-struts" type="bool" value="false"/>
       <property name="background-alpha" type="uint" value="0"/>
+      <property name="icon-size" type="uint" value="0"/>
+      <property name="nrows" type="uint" value="1"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -52,8 +56,9 @@
     </property>
     <property name="plugin-8" type="string" value="whiskermenu"/>
     <property name="plugin-5" type="string" value="clock">
-      <property name="digital-format" type="string" value="&lt;b&gt;%A&lt;/b&gt; %x &lt;span color=&apos;#19f&apos;&gt;%l:%M%P&lt;/span&gt; %Z &lt;i&gt;(%V)&lt;/i&gt; "/>
-      <property name="timezone" type="string" value="Asia/Bangkok"/>
+      <property name="digital-format" type="string" value="%c %z"/>
+      <property name="timezone" type="string" value="Asia/Shanghai"/>
+      <property name="mode" type="uint" value="2"/>
     </property>
     <property name="plugin-1" type="string" value="battery"/>
     <property name="plugin-6" type="string" value="cpugraph"/>
@@ -61,23 +66,15 @@
     <property name="plugin-11" type="string" value="fsguard"/>
     <property name="plugin-15" type="string" value="systemload"/>
     <property name="plugin-16" type="string" value="weather"/>
-    <property name="plugin-17" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
-      <property name="style" type="uint" value="3"/>
-    </property>
     <property name="plugin-18" type="string" value="separator">
       <property name="style" type="uint" value="3"/>
       <property name="expand" type="bool" value="true"/>
     </property>
     <property name="plugin-19" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="vlc"/>
+      <property name="mpris-players" type="string" value="audacious;chromium.instance1003;chromium.instance10140;chromium.instance1046;chromium.instance1083;chromium.instance11178;chromium.instance11459;chromium.instance1165;chromium.instance14291;chromium.instance1662;chromium.instance2102;chromium.instance21654;chromium.instance24895;chromium.instance3883;chromium.instance4025;chromium.instance4890;chromium.instance4946;chromium.instance5007;chromium.instance5109;chromium.instance5130;chromium.instance5344;chromium.instance5403;chromium.instance5490;chromium.instance5660;chromium.instance5693;chromium.instance5709;chromium.instance5768;chromium.instance5800;chromium.instance5969;chromium.instance6061;chromium.instance6340;chromium.instance6458;chromium.instance6798;chromium.instance6851;chromium.instance7944;chromium.instance8930;chromium.instance9573;chromium.instance960;chromium.instance965;chromium.instance971;chromium.instance974;chromium.instance976;chromium.instance977;chromium.instance981;chromium.instance986;com.github.needleandthread.vocal;mpv;mpv.instance10068;mpv.instance10179;mpv.instance10188;mpv.instance10195;mpv.instance10240;mpv.instance10651;mpv.instance1071;mpv.instance10713;mpv.instance10732;mpv.instance10797;mpv.instance10803;mpv.instance10816;mpv.instance10900;mpv.instance1092;mpv.instance10985;mpv.instance11002;mpv.instance1102;mpv.instance11192;mpv.instance11223;mpv.instance11265;mpv.instance11332;mpv.instance11645;mpv.instance11698;mpv.instance1178;mpv.instance11789;mpv.instance11872;mpv.instance11930;mpv.instance12006;mpv.instance12175;mpv.instance12225;mpv.instance12411;mpv.instance1252;mpv.instance12669;mpv.instance12691;mpv.instance12723;mpv.instance12827;mpv.instance12879;mpv.instance13027;mpv.instance13083;mpv.instance1332;mpv.instance13410;mpv.instance13573;mpv.instance13584;mpv.instance13602;mpv.instance13725;mpv.instance13727;mpv.instance13942;mpv.instance14081;mpv.instance14222;mpv.instance14246;mpv.instance14247;mpv.instance14288;mpv.instance14337;mpv.instance14411;mpv.instance14485;mpv.instance14646;mpv.instance14655;mpv.instance1467;mpv.instance15080;mpv.instance1512;mpv.instance1513;mpv.instance15144;mpv.instance15383;mpv.instance15509;mpv.instance1572;mpv.instance15768;mpv.instance15774;mpv.instance15813;mpv.instance15972;mpv.instance16180;mpv.instance16275;mpv.instance16287;mpv.instance16298;mpv.instance16360;mpv.instance16376;mpv.instance16481;mpv.instance16546;mpv.instance16634;mpv.instance16848;mpv.instance16922;mpv.instance1694;mpv.instance17123;mpv.instance1719;mpv.instance17264;mpv.instance17305;mpv.instance17306;mpv.instance17483;mpv.instance1772;mpv.instance17723;mpv.instance17850;mpv.instance17864;mpv.instance17964;mpv.instance18038;mpv.instance1814;mpv.instance18152;mpv.instance18154;mpv.instance18204;mpv.instance18306;mpv.instance18470;mpv.instance18833;mpv.instance18850;mpv.instance18865;mpv.instance18887;mpv.instance18918;mpv.instance18967;mpv.instance18987;mpv.instance19063;mpv.instance19110;mpv.instance19129;mpv.instance19149;mpv.instance19166;mpv.instance19171;mpv.instance19386;mpv.instance19775;mpv.instance1980;mpv.instance19911;mpv.instance20021;mpv.instance2012;mpv.instance20198;mpv.instance20374;mpv.instance20375;mpv.instance20400;mpv.instance20451;mpv.instance20525;mpv.instance2062;mpv.instance2063;mpv.instance20666;mpv.instance20681;mpv.instance20720;mpv.instance2093;mpv.instance21120;mpv.instance21174;mpv.instance21313;mpv.instance2139;mpv.instance21521;mpv.instance21540;mpv.instance21577;mpv.instance21690;mpv.instance21723;mpv.instance21796;mpv.instance21816;mpv.instance21971;mpv.instance21980;mpv.instance2222;mpv.instance22234;mpv.instance22235;mpv.instance22400;mpv.instance22465;mpv.instance22496;mpv.instance22615;mpv.instance22617;mpv.instance2265;mpv.instance22667;mpv.instance22789;mpv.instance23026;mpv.instance23036;mpv.instance23141;mpv.instance2325;mpv.instance23422;mpv.instance23431;mpv.instance23515;mpv.instance23525;mpv.instance23628;mpv.instance23637;mpv.instance2364;mpv.instance23698;mpv.instance23715;mpv.instance23727;mpv.instance23844;mpv.instance23974;mpv.instance23982;mpv.instance24020;mpv.instance24204;mpv.instance24207;mpv.instance24322;mpv.instance2436;mpv.instance24663;mpv.instance24763;mpv.instance24893;mpv.instance24978;mpv.instance25017;mpv.instance25020;mpv.instance25048;mpv.instance25205;mpv.instance25326;mpv.instance25478;mpv.instance25668;mpv.instance25759;mpv.instance25779;mpv.instance25816;mpv.instance25940;mpv.instance26070;mpv.instance26124;mpv.instance26288;mpv.instance26290;mpv.instance2631;mpv.instance26332;mpv.instance26353;mpv.instance26366;mpv.instance26563;mpv.instance26738;mpv.instance26759;mpv.instance26793;mpv.instance26819;mpv.instance26844;mpv.instance26926;mpv.instance2695;mpv.instance27048;mpv.instance27058;mpv.instance27079;mpv.instance27082;mpv.instance27274;mpv.instance27396;mpv.instance27468;mpv.instance27546;mpv.instance27574;mpv.instance27743;mpv.instance27954;mpv.instance28171;mpv.instance28201;mpv.instance28568;mpv.instance28572;mpv.instance28799;mpv.instance28851;mpv.instance28896;mpv.instance28899;mpv.instance29170;mpv.instance29325;mpv.instance29402;mpv.instance29587;mpv.instance29687;mpv.instance29745;mpv.instance29798;mpv.instance29843;mpv.instance30051;mpv.instance30131;mpv.instance30148;mpv.instance30228;mpv.instance30296;mpv.instance30406;mpv.instance30516;mpv.instance30560;mpv.instance30638;mpv.instance30654;mpv.instance3069;mpv.instance30798;mpv.instance30808;mpv.instance30933;mpv.instance31052;mpv.instance31080;mpv.instance31156;mpv.instance31172;mpv.instance31185;mpv.instance31216;mpv.instance31238;mpv.instance31297;mpv.instance31374;mpv.instance31549;mpv.instance31554;mpv.instance31626;mpv.instance31812;mpv.instance31851;mpv.instance31883;mpv.instance32231;mpv.instance3225;mpv.instance32321;mpv.instance32322;mpv.instance32345;mpv.instance32410;mpv.instance32423;mpv.instance32532;mpv.instance32584;mpv.instance32592;mpv.instance32603;mpv.instance32666;mpv.instance32673;mpv.instance32685;mpv.instance32721;mpv.instance3352;mpv.instance3518;mpv.instance3519;mpv.instance354;mpv.instance3543;mpv.instance3570;mpv.instance3601;mpv.instance362;mpv.instance3727;mpv.instance3771;mpv.instance3843;mpv.instance3960;mpv.instance3993;mpv.instance4019;mpv.instance4037;mpv.instance4106;mpv.instance4152;mpv.instance4298;mpv.instance4398;mpv.instance4522;mpv.instance4524;mpv.instance4664;mpv.instance4812;mpv.instance4883;mpv.instance4905;mpv.instance5041;mpv.instance5093;mpv.instance5126;mpv.instance529;mpv.instance5302;mpv.instance5340;mpv.instance5401;mpv.instance5439;mpv.instance5465;mpv.instance5469;mpv.instance5472;mpv.instance5493;mpv.instance5518;mpv.instance5711;mpv.instance579;mpv.instance5792;mpv.instance5828;mpv.instance5830;mpv.instance5878;mpv.instance5919;mpv.instance5972;mpv.instance6063;mpv.instance6087;mpv.instance6091;mpv.instance6154;mpv.instance6159;mpv.instance616;mpv.instance6202;mpv.instance6225;mpv.instance6264;mpv.instance6280;mpv.instance6356;mpv.instance6491;mpv.instance6547;mpv.instance6605;mpv.instance6622;mpv.instance6793;mpv.instance6875;mpv.instance6994;mpv.instance7037;mpv.instance7072;mpv.instance7150;mpv.instance7252;mpv.instance7375;mpv.instance7393;mpv.instance7499;mpv.instance7547;mpv.instance8089;mpv.instance8232;mpv.instance8238;mpv.instance8270;mpv.instance8273;mpv.instance8416;mpv.instance8631;mpv.instance8644;mpv.instance8653;mpv.instance8799;mpv.instance8827;mpv.instance8842;mpv.instance8896;mpv.instance8902;mpv.instance8940;mpv.instance9026;mpv.instance9193;mpv.instance9342;mpv.instance9490;mpv.instance9557;mpv.instance9569;mpv.instance9592;mpv.instance9599;mpv.instance9656;mpv.instance9681;mpv.instance9688;mpv.instance9794;mpv.instance9826;mpv.instance9935;mpv.instance9946;mpv.instance9969;vlc"/>
     </property>
     <property name="plugin-22" type="string" value="netload"/>
-    <property name="plugin-12" type="string" value="separator">
-      <property name="style" type="uint" value="3"/>
-      <property name="expand" type="bool" value="true"/>
-    </property>
     <property name="plugin-13" type="string" value="separator">
       <property name="style" type="uint" value="3"/>
       <property name="expand" type="bool" value="true"/>
@@ -85,6 +82,15 @@
     <property name="plugin-14" type="string" value="separator">
       <property name="expand" type="bool" value="false"/>
       <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-2" type="string" value="wavelan"/>
+    <property name="plugin-9" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="3"/>
+    </property>
+    <property name="plugin-12" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="3"/>
     </property>
   </property>
   <property name="configver" type="int" value="2"/>

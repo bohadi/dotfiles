@@ -1,13 +1,13 @@
 [Main]
-Timeout=1000
+Timeout=2000
 Timeout_Seconds=1
 Use_Timeout_Seconds=true
 Use_Click_Command=false
 Click_Command=xfce4-taskmanager
 
 [SL_Cpu]
-Enabled=false
-Use_Label=true
+Enabled=true
+Use_Label=false
 Color=rgb(0,0,192)
 Text=cpu
 
@@ -18,8 +18,8 @@ Color=rgb(252,175,62)
 Text=mem
 
 [SL_Swap]
-Enabled=false
-Use_Label=true
+Enabled=true
+Use_Label=false
 Color=rgb(240,240,0)
 Text=swap
 

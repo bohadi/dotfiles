@@ -13,6 +13,7 @@
   <property name="Synaptics_TM3242-001" type="empty">
     <property name="Properties" type="empty">
       <property name="libinput_Tapping_Enabled" type="int" value="1"/>
+      <property name="Device_Enabled" type="int" value="1"/>
     </property>
     <property name="RightHanded" type="bool" value="true"/>
     <property name="Threshold" type="int" value="1"/>
