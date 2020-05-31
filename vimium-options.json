@@ -1,0 +1,210 @@
+{
+  "settingsVersion": "1.66",
+  "exclusionRules": [
+    {
+      "pattern": "https?://mail.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://5-71942994-gh.circle-artifacts.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://localhost:3000/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://localhost:3001/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.qstheory.cn/*",
+      "passKeys": "nmrt"
+    },
+    {
+      "pattern": "https?://www.people.com.cn/*",
+      "passKeys": "nmrt"
+    },
+    {
+      "pattern": "https?://www.zhihu.com/*",
+      "passKeys": "nrmt"
+    },
+    {
+      "pattern": "https?://www.weibo.com/*",
+      "passKeys": "nmrt"
+    },
+    {
+      "pattern": "https?://api.tw.weibo.com/*",
+      "passKeys": "nmrtg"
+    },
+    {
+      "pattern": "https?://localhost:61492/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://localhost:5000/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://localhost:",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://mario.haskell-miso.org/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://webzook.net:8080/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://bohadi.github.io/smb",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://bohadi.github.io/smb/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://donnierussellii.github.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.viki.com/*",
+      "passKeys": "g"
+    },
+    {
+      "pattern": "https?://www.baow.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://lightbits.github.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://zh.wikipedia.org/*",
+      "passKeys": "nmt"
+    },
+    {
+      "pattern": "https?://tommyettinger.github.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://web.mit.edu/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://wordswing.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://crawl.akrasiac.org:8080/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://mail.protonmail.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://cpets.ch/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.codingcookies.com/demo/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://b-cdn.gamejolt.net/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://munificent.github.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://keycode.info/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://bohadi.github.io/rotjs_tut/",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://rezich.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://dungeonyak.itch.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://dungeonyak.itch.io/inner-life/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://v6p9d9t4.ssl.hwcdn.net/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://bozar.github.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://scarsoftheuntrodden.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://rottensoup.herokuapp.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://mizar999.github.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://localhost:8000/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://bohadi.github.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://bfnightly.bracketproductions.com/rustbook/wasm/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://colab.research.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://ja.wikipedia.org/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "about:blank*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://towerhufham.itch.io/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": true,
+  "waitForEnterForFilteredHints": false,
+  "hideHud": false,
+  "keyMappings": "map Q Vomnibar.activateInNewTab\nmap q Vomnibar.activate\nmap h goBack\nmap l goForward\nmap i previousTab\nmap o nextTab\nmap I enterInsertMode\n\nunmap m\nunmap n\nunmap b\nunmap v\nunmap V\n\nunmap p",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "1234",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "goog: https://www.google.com/search?q=%s\nbing: https://cn.bing.com/search?q=%s\n\nwiki: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\nbaike: https://baike.baidu.com/item/%s\n百科: https://baike.baidu.com/item/%s\nfanyi: https://fanyi.baidu.com/#zh/en/%s\n翻译: https://fanyi.baidu.com/#zh/en/%s\n\n# yt: https://www.youtube.com/results?search_query=%s Youtube\n# vqq: https://www.v.qq.com\n\n# maps: https://www.google.com/maps?q=%s Google maps\n# ditu: \n\n# az: https://www.amazon.com/s/?field-keywords=%s Amazon\n# tmall:\n# taobao:",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
