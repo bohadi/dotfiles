@@ -33,7 +33,6 @@
       <property name="&lt;Super&gt;w" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Super&gt;s" type="string" value="xfce4-terminal"/>
       <property name="&lt;Super&gt;e" type="string" value="exo-open --launch FileManager"/>
-      <property name="&lt;Alt&gt;Super_L" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Super&gt;p" type="string" value="exo-open --launch MailReader"/>
       <property name="&lt;Super&gt;m" type="string" value="chromium --new-window &quot;http://localhost:4000/blog&quot;"/>
       <property name="&lt;Super&gt;period" type="string" value="xfce4-terminal --zoom -1 -e &quot;tmux a -t Bohadi-C&quot;"/>
@@ -46,6 +45,7 @@
       <property name="&lt;Shift&gt;F12" type="string" value="light -S 5"/>
       <property name="&lt;Primary&gt;comma" type="string" value="wmctrl -r :ACTIVE: -b toggle,above"/>
       <property name="&lt;Primary&gt;period" type="string" value="wmctrl -r :ACTIVE: -b toggle,sticky"/>
+      <property name="&lt;Alt&gt;Super_L" type="string" value="xfce4-popup-whiskermenu"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

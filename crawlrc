@@ -22,6 +22,22 @@ force_more_message += miscast
 force_more_message += (orb of fire|27-headed|Agnes|Aizul|Antaeus|Arachne|Asmodeus|Asterion|Azrael|Blork the orc|Boris|Cerebov|Crazy Yiuf|Dispater|Dissolution|Donald|Dowan|Duvessa|Edmund|Ereshkigal|Erica|Erolcha|Eustachio|Fannar|Frances|Francis|Frederick|Gastronok|Geryon|Gloorx Vloq|Grinder|Grum|Harold|Ignacio|Ijyb|Ilsuiw|Jessica|Jorgrun|Jory|Joseph|Josephine|Jozef|Khufu|Kirke|Lamia|Lom Lobon|Louise|Mara|Margery|Maud|Maurice|Menkaure|Mennas|Mnoleg|Murray|Natasha|Nergalle|Nessos|Nikola|Norris|Pikel|Polyphemus|Prince Ribbit|Psyche|Purgy|Roxanne|Rupert|Saint Roka|Sigmund|Snorg|Sojobo|Sonja|Terence|The Lernaean hydra|The royal jelly|The Serpent of Hell|Tiamat|Urug|Vashnia|Wiglaf|Xtahua|chromatic's ghost).*(comes? into view|opens the)
 
 
+tile_upstairs_col = green
+tile_branchstairs_col = red
+tile_door_col = #c27149
+tile_wall_col = #5a524c
+tile_explore_horizon_col = #aaaaaa
+tile_floor_col = #1e1b1a
+tile_item_col = #1e1b1a
+tile_feature_col = #d4be21
+tile_plant_col = #4b6d39
+tile_water_col = #0b5d79
+tile_deep_water_col = #1212b3
+tile_trap_col = #f447ff
+tile_transporter_col = #ff5656
+tile_transporter_landing_col = #59ff89
+tile_lava_col = #5f0a00
+
 
 item_slot ^= identify:+i
 item_slot ^= remove curse:+r

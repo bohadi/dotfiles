@@ -28,7 +28,9 @@ alias ytdl='youtube-dl'
 tchat () { chromium --app-window-size=200,100 --app-window-position=1000,500 --app=https://www.twitch.tv/popout/"$1"/chat ; }
 cdcss () { chromium --new-window https://crawl.develz.org/info http://crawl.chaosforge.org http://dcssfamiliar.com file:///home/bohadi/.crawl/morgue/chromatic.txt ; }
 
-eval "$(stack --bash-completion-script stack)"
+alias qpdfui='qpdfview --unique --instance'
+
+#eval "$(stack --bash-completion-script stack)"
 
 export EDITOR=vim
 
