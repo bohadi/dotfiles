@@ -30,6 +30,19 @@ cdcss () { chromium --new-window https://crawl.develz.org/info http://crawl.chao
 
 alias qpdfui='qpdfview --unique --instance'
 
+alias tvxin='
+  streamlink http://ivi.bupt.edu.cn/hls/cctv1.m3u8     worst  &>/dev/null&  #1 general
+  streamlink http://ivi.bupt.edu.cn/hls/cctv2.m3u8     worst  &>/dev/null&  #2 finance
+  streamlink http://ivi.bupt.edu.cn/hls/cctv4.m3u8     worst  &>/dev/null&  #4 international
+  streamlink http://ivi.bupt.edu.cn/hls/cctv13.m3u8    worst  &>/dev/null&  #13 news
+  exit'
+alias tvxi='
+  streamlink http://ivi.bupt.edu.cn/hls/cctv3.m3u8     worst  &>/dev/null&  #3 variety
+  streamlink http://ivi.bupt.edu.cn/hls/cctv6.m3u8     worst  &>/dev/null&  #6 movies
+  streamlink http://ivi.bupt.edu.cn/hls/cctv8.m3u8     worst  &>/dev/null&  #8 drama
+  streamlink http://ivi.bupt.edu.cn/hls/cctv9.m3u8     worst  &>/dev/null&  #9 documentary
+  exit'
+
 #eval "$(stack --bash-completion-script stack)"
 
 export EDITOR=vim
@@ -42,6 +55,7 @@ alias zoom='LC_ALL="zh_CN.UTF8" zoom'
 export GO111MODULE=auto
 export GOPATH=~/go
 
+export PATH=$PATH:~/miniconda/bin
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:~/.yarn/bin
@@ -202,3 +216,19 @@ beep() {
     paplay $sound_error --volume=$vol3
   fi
 }
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/bohadi/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/bohadi/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/home/bohadi/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bohadi/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
