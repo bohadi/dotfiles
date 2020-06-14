@@ -30,13 +30,21 @@ cdcss () { chromium --new-window https://crawl.develz.org/info http://crawl.chao
 
 alias qpdfui='qpdfview --unique --instance'
 
-alias tvxin='
+alias cctv='
+  streamlink http://ivi.bupt.edu.cn/hls/cctv1.m3u8     worst  &>/dev/null&  #1 general
+  streamlink http://ivi.bupt.edu.cn/hls/cctv4.m3u8     worst  &>/dev/null&  #4 international
+  streamlink http://ivi.bupt.edu.cn/hls/cctv13.m3u8    worst  &>/dev/null&  #13 news
+  streamlink http://ivi.bupt.edu.cn/hls/cctv3.m3u8     worst  &>/dev/null&  #3 variety
+  streamlink http://ivi.bupt.edu.cn/hls/cctv6.m3u8     worst  &>/dev/null&  #6 movies
+  streamlink http://ivi.bupt.edu.cn/hls/cctv8.m3u8     worst  &>/dev/null&  #8 drama
+  exit'
+alias cctv1='
   streamlink http://ivi.bupt.edu.cn/hls/cctv1.m3u8     worst  &>/dev/null&  #1 general
   streamlink http://ivi.bupt.edu.cn/hls/cctv2.m3u8     worst  &>/dev/null&  #2 finance
   streamlink http://ivi.bupt.edu.cn/hls/cctv4.m3u8     worst  &>/dev/null&  #4 international
   streamlink http://ivi.bupt.edu.cn/hls/cctv13.m3u8    worst  &>/dev/null&  #13 news
   exit'
-alias tvxi='
+alias cctv2='
   streamlink http://ivi.bupt.edu.cn/hls/cctv3.m3u8     worst  &>/dev/null&  #3 variety
   streamlink http://ivi.bupt.edu.cn/hls/cctv6.m3u8     worst  &>/dev/null&  #6 movies
   streamlink http://ivi.bupt.edu.cn/hls/cctv8.m3u8     worst  &>/dev/null&  #8 drama

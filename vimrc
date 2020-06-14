@@ -5,6 +5,8 @@ set foldmethod=manual      " Automatically create folds for each indent
 "au BufWinLeave * mkview     " Automatically save and load folds
 "au BufWinEnter * silent loadview
 
+set termbidi
+
 set noswapfile
 set nobackup
 set nocp                    " Enable plugins
